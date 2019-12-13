@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
 
-namespace euler55
+namespace Euler55
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -17,7 +17,8 @@ namespace euler55
         {
             Console.WriteLine($"calculating Lychrel for {start}");
             int iterations = 0;
-            Task calc = Task.Run(() => runLychrel(start, ref iterations));
+            int currLen = 0;
+            Task calc = Task.Run(() => runLychrelV1(start, ref iterations, ref currLen));
 
             int lastIter = 0;
             int seconds = 0;
@@ -25,28 +26,25 @@ namespace euler55
             {
                 seconds++;
                 int currIter = iterations;
-                Console.WriteLine($"{seconds}s\t{currIter-lastIter}/s\t{currIter}");
+                Console.WriteLine($"{seconds}s\t{currIter-lastIter}/s\titer: {currIter}\tlen: {currLen}");
                 lastIter = currIter;
+                if (seconds==10)
+                {
+                    break;
+                }
             }
         }
-        static void runLychrel(int start, ref int iterations)
+        public static void runLychrelV1(int start, ref int iterations, ref int len)
         {
             iterations = 0;
-            var p = new PalinAdd[2] { new PalinAdd(start), new PalinAdd(0) };
-            //Console.WriteLine($"(0)\t{p[0]}");
-
-            int idx1 = 1;
-            int idx2 = 0;
+            var iter = new PalinIter(196, new PalinAddUnrolledWithArray()).GetEnumerator();
             do
             {
-                idx1 ^= 1;
-                idx2 ^= 1;
-
-                p[idx1].selfPlusPalindrom(ref p[idx2]);
+                iter.MoveNext();
                 ++iterations;
+                len = iter.Current.len;
 
-                //Console.WriteLine($"{iterations}\t{p[idx2]}");
-            } while (!p[idx2].isPalindrom());
+            } while ( ! iter.Current.isPalindrom() );
         }
     }
 }

@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{BB527EA7-E73B-49BA-AC31-F1C4F6C8AF59}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>euler55</RootNamespace>
+    <RootNamespace>Euler55</RootNamespace>
     <AssemblyName>euler55</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -38,7 +38,13 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PalinAdd.cs" />
+    <Compile Include="IPalindromAdder.cs" />
+    <Compile Include="BigInt.cs" />
+    <Compile Include="PalinAddTwoStrikes.cs" />
+    <Compile Include="PalinAddUnrolled.cs" />
+    <Compile Include="PalinAddUnrolledWithArray.cs" />
+    <Compile Include="PalinAddV1.cs" />
+    <Compile Include="PalinIter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

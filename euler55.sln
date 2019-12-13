@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.29326.143
+VisualStudioVersion = 16.0.29609.76
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "euler55", "euler55\euler55.csproj", "{BB527EA7-E73B-49BA-AC31-F1C4F6C8AF59}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestEuler55", "TestEuler55\TestEuler55.csproj", "{EA80639E-F2F5-4795-A270-A55ACB052B5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "euler55Bench", "euler55Bench\euler55Bench.csproj", "{949658BF-E160-48EC-A01C-9647E7D73E22}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,11 +23,18 @@ Global
 		{EA80639E-F2F5-4795-A270-A55ACB052B5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA80639E-F2F5-4795-A270-A55ACB052B5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA80639E-F2F5-4795-A270-A55ACB052B5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{949658BF-E160-48EC-A01C-9647E7D73E22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{949658BF-E160-48EC-A01C-9647E7D73E22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{949658BF-E160-48EC-A01C-9647E7D73E22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{949658BF-E160-48EC-A01C-9647E7D73E22}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3D64D080-6040-42B2-A819-4D518DBD4006}
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
 	EndGlobalSection
 EndGlobal
