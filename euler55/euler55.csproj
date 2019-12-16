@@ -40,6 +40,8 @@
   <ItemGroup>
     <Compile Include="IPalindromAdder.cs" />
     <Compile Include="BigInt.cs" />
+    <Compile Include="Lych.cs" />
+    <Compile Include="PalinAddOneShotV1.cs" />
     <Compile Include="PalinAddTwoStrikes.cs" />
     <Compile Include="PalinAddUnrolled.cs" />
     <Compile Include="PalinAddUnrolledWithArray.cs" />
